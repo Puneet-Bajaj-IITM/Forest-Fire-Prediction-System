@@ -19,41 +19,38 @@
             <img src="{{ url_for('static', filename = 'images/header-text.png')}}" alt="">
             <h1>ALGERIAN FOREST FIRE PREDICTION</h1>
             <img src="{{ url_for('static', filename = 'images/dots.png')}}" alt="">
-        </div>
-        <h2>Project by Vani Seth, Vansh Awasthi and Vaibhav Singh Rajpoot
-       
-        </h2>
+        </div>       
         <div class="container">
             <h3>Fire Prediction (Classification Model) </h3>
             <form action="{{ url_for('predictC')}}" id="booking-form" class="booking-form" method="POST">
                 <div class="form-group">
                     <div class="form-Temperature">
                         <label for="Temperature">Temperature</label>
-                        <input type="number" id="Temperature" name="Temperature" placeholder="Temperature" />
+                        <input type="number" step="any" id="Temperature" name="Temperature" placeholder="Temperature" />
                     </div>
                     <div class="form-Ws">
                         <label for="Ws">WindSpeed</label>
-                        <input type="number" id="Ws" name="Ws" placeholder="Wind speed" />
+                        <input type="number" step="any" id="Ws" name="Ws" placeholder="Wind speed" />
                     </div>
                     <div class="form-FFMC">
                         <label for="FFMC"> FMC </label>
-                        <input type="number" id="FFMC" name="FFMC" placeholder="FFMC" />
+                        <input type="number" step="any" id="FFMC" name="FFMC" placeholder="FFMC" />
                     </div>
                     <div class="form-DMC">
                         <label for="DMC">DMC</label>
-                        <input type="number" id="DMC" name="DMC" placeholder="DMC" />
+                        <input type="number" step="any" id="DMC" name="DMC" placeholder="DMC" />
                     </div>
                     <div class="form-ISI">
                         <label for="ISI">ISI </label>
-                        <input type="number" id="ISI" name="ISI" placeholder="ISI" />
+                        <input type="number" step="any" id="ISI" name="ISI" placeholder="ISI" />
                     </div>
                     <div class="form-RH">
                         <label for="RH">RH</label>
-                        <input type="number" id="RH" name="RH" placeholder="RH" />
+                        <input type="number" step="any" id="RH" name="RH" placeholder="RH" />
                     </div>
                     <div class="form-rain">
                         <label for="rain">Rain</label>
-                        <input type="number" id="rain" name="rain" placeholder="Rain" />
+                        <input type="number" step="any" id="rain" name="rain" placeholder="Rain" />
                     </div>
                     <div class="form-submit">
                         <input type="submit" id="submit" class="submit" value="Predict" />
@@ -62,46 +59,6 @@
                           {{prediction_text1}}
             </form>
         </div>
-        <div class="container">
-            <h3>Fire Prediction (Regression Model) </h3>
-            <form action="{{ url_for('predictR')}}" id="Reg_form" class="booking-form" method="POST">
-                <div class="form-group">
-                    <div>
-                        <label for="Temperature1">Temperature</label>
-                        <input type="text" id="Temperature1" name="Temperature" placeholder="Temperature" />
-                    </div>
-                    <div>
-                        <label for="Wind_speed">Windspeed</label>
-                        <input type="text" id="Wind_speed" name="Wind_speed" placeholder="Wind speed" />
-                    </div>
-                    <div>
-                        <label for="FFMC1">FMC</label>
-                        <input type="text" id="FFMC1" name="FFMC" placeholder="FFMC" />
-                    </div>
-                    <div>
-                        <label for="DMC1">DMC</label>
-                        <input type="text" id="DMC1" name="DMC1" placeholder="DMC" />
-                    </div>
-                    <div>
-                        <label for="ISI1">ISI </label>
-                        <input type="text" id="ISI1" name="ISI1" placeholder="ISI" />
-                    </div>
-                    <div class="form-RH">
-                        <label for="RH">RH</label>
-                        <input type="number" id="RH" name="RH" placeholder="RH" />
-                    </div>
-                    <div class="form-rain">
-                        <label for="rain">Rain</label>
-                        <input type="number" id="rain" name="rain" placeholder="Rain" />
-                    </div>
-                    <div class="form-submit">
-                        <input type="submit" id="submitR" class="submit" value="Predict" />
-                    </div>
-                </div>
-                          {{prediction_text2}}
-            </form>
-        </div>
-
     </div>
 </body>
 </html>
