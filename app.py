@@ -12,8 +12,6 @@ app = Flask(__name__)
 # Import Classification and Regression model file
 with open('linear_regression_model.pkl', 'rb') as file:
     model_C = pickle.load(file)
-R_pickle = bz2.BZ2File('Regression.pkl', 'rb')
-model_R = pickle.load(R_pickle)
 
 
 
